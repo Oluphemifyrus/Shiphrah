@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+a{
+    color: inherit;
+}
+
+row{
+    width: 100%;
+}
+column{
+    width:fit-content;
+}
