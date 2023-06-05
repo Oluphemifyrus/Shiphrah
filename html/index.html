@@ -6,90 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Shiphrah Kiddies Academy</title>
     <link rel="stylesheet" href="index.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://kit.fontawesome.com/380552618d.js" crossorigin="anonymous"></script>
 </head>
 <body class="container-{breakpoint}">
-    <!-- <header>
-        
-    </header>
-    <nav class="header-area">
-        <div class="container">
-            <div class="row d_flex">
-                <div class=" col-md-3 col-sm-3">
-                    <div class="logo">
-                        <a href="index.html" style="line-height:0.5rem;">
-                            <p>Shiphrah</p>
-                            <p>Kiddies Academy</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-9 col-sm-9">
-                    <div class="navbar-area">
-                    <nav class="site-navbar">
-                        <ul>
-                            <li><a class="active" href="index.html">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="contact.html">Contact us</a></li>
-                            <li><a href="school-news.html">School News</a></li>
-                        </ul>
-                        <button class="nav-toggler">
-                        <span></span>
-                        </button>
-                    </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="container">
-            <div class="row">
-                <p>Shiphrah Kiddies Academy is a reputable children's school dedicated to providing high-quality education and care for children between the ages of 1 and 6. We understand the crucial early years of a child's development and aim to create a nurturing and stimulating environment where children can thrive.</p>
 
-                <p>At Shiphrah Kiddies Academy, we believe that every child is unique and has the potential to excel. Our dedicated team of experienced educators is passionate about early childhood education and is committed to fostering the intellectual, social, emotional, and physical development of each child.</p>
+    <ul id="defNav" class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="school-news.html">School News</a>
+        </li>
+        <li class="nav-item" >
+            <i class="fas fa-bars" id="hamburger" onclick="navToggler()"></i>
+        </li>
 
-                <h2>Our Philosophy</h2>
+        <ul class="hidden-nav" id="toggleNav" style="display: none;">
+            <li class="nav-item">
+                <i class="far fa-times" id="closeSideNav" onclick="closeNav()"></i>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled">School News</a>
+            </li>
+        </ul>  
+    </ul>  
+    
+<style>
+   @media only screen and (max-width: 400px) {
+    .navbar {
+        display: flex;
+    }
+}
 
-                    <p>We follow a child-centered approach that recognizes the individual needs and interests of every child. Our curriculum is designed to be engaging, age-appropriate, and based on best practices in early childhood education. Through a combination of structured learning activities and play-based experiences, we create a balanced and comprehensive learning environment.</p>
+</style>
 
-                <h2>Our Programs</h2>
-                    <h3>Preschool Program</h3>
-                        <p>Our preschool program is tailored to children aged 1 to 3 years. We focus on providing a safe and nurturing environment where children can explore and learn through play, sensory activities, and interactive experiences. Our experienced teachers guide children in developing essential skills such as language development, cognitive abilities, fine and gross motor skills, and social-emotional skills.</p>
-                    <h3>Kindergarten Program</h3>
-                        <p>Our kindergarten program is designed for children aged 4 to 6 years, preparing them for their educational journey ahead. We offer a structured curriculum that covers a range of subjects, including literacy, mathematics, science, arts, and social studies. Our goal is to foster a love for learning, critical thinking, problem-solving skills, and a strong foundation for future academic success.</p>
+    <script>
+    //     function navToggler() {
+    //         const toggleNav = document.getElementById('toggleNav');
+    //         const defNav = document.getElementById('defNav');
 
-                <h2>After School Services</h2>
+    //         toggleNav.style.display = 'block';
+    //         defNav.style.display = 'none';
+    //     }
 
-                    <p>In addition to our regular school programs, we provide after-school services to support busy parents and extend the learning opportunities for our students. Our after-school program offers a safe and supervised environment where children can engage in enriching activities, homework assistance, and recreational play. We aim to strike a balance between fun and learning, allowing children to explore their interests and develop new skills outside of regular school hours.</p>
+    // if (document.getElementById('toggleNav').style.display === 'block') {
+    //     document.getElementById('defNav').style.display = 'none';
+    //     }
+    
+    function navToggler() {
+        var defaultNav = document.getElementById('defNav')
+        var hiddenNav = document.getElementById('toggleNav')
 
-                <h2>Our Commitment</h2>
+        defaultNav.style.display === 'none';
+        toggleNav.style.display === 'block';
 
-                    <p>At Shiphrah Kiddies Academy, we prioritize the well-being and holistic development of each child. We maintain a low student-to-teacher ratio to ensure personalized attention and create meaningful connections with our students and their families. Our facility is equipped with age-appropriate resources, secure play areas, and modern learning materials to facilitate a positive learning experience.</p>
-
-                    <p>We welcome parents and guardians to visit our school, meet our dedicated team, and learn more about our programs. Together, we can provide the best educational foundation and a nurturing environment for your child's early years.</p>
-
-                    <p>Come and join Shiphrah Kiddies Academy, where every child's potential is valued, and their dreams are nurtured!</p>
-
-            </div>
-        </div>
-    </main> -->
-
-
-<div class="navbar">
-    <div class="nav">
-        <div class="row">
-            <div class="col">
-                <div class="school-logo">
-                    <a href="index.html">
-                        <img src="" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    }
+        if (document.getElementById('defNav').style.display == 'block'){
+        document.getElementById('toggleNav').style.display == 'none';
+    }
 
 
+    function closeNav() {
+        const toggleNav = document.getElementById('toggleNav');
+        const deNav = document.getElementById('defNav')
 
+        deNav.style.display == 'block';
+        toggleNav.style.display = 'none';
+    }
+    </script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
